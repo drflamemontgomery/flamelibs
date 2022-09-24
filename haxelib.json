@@ -1,0 +1,12 @@
+{
+    "name": "flamelibs",
+    "url" : "https://github.com/drflamemontgomery/flamelibs",
+    "license": "MIT",
+    "tags": ["Heaps", "package", "flame"],
+    "description": "My personal libs for Haxe Projects",
+    "version": "0.0.0",
+    "classPath": "src/",
+    "releasenote": "Created"
+    "contributors": ["awarner"],
+    "dependencies": {}
+}
