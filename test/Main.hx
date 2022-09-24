@@ -10,7 +10,9 @@ class Main {
 
     #if !macro
     public static function main() {
+        #if verbose
         dn.CiAssert.VERBOSE = true;
+        #end
         new Main();
     }
 
