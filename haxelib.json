@@ -8,5 +8,5 @@
     "classPath": "src/",
     "releasenote": "Created"
     "contributors": ["awarner"],
-    "dependencies": {}
+    "dependencies": {"deepnightLibs"}
 }
