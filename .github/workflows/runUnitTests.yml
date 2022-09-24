@@ -1,0 +1,34 @@
+name: Unit tests
+
+on:
+    push:
+        branches:
+            - main
+    pull_request:
+        branches:
+            - main
+
+jobs:
+    build:
+
+        strategy:
+            matrix:
+                os: [windows-latest]
+                haxe: [4.2.5]
+            fail-fast: true
+        runs-on: window-latest
+
+        steps:
+
+            - uses: actions/checkout@v2
+            - uses: krdlab/setup-haxe@v1
+              with:
+                haxe-version: ${{ matrix.haxe }}
+            - run: haxe -version
+
+
+            - run: haxelib git deepnightLibs https://github.com/deepnight/deepnightLibs
+            - run: haxelib list
+
+
+            - run: haxe tests.js.hxml -D verbose
